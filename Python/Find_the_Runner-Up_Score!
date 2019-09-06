@@ -1,0 +1,18 @@
+'''Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given scores. Store them in a list and find the score of the runner-up.
+
+Input Format
+
+The first line contains . The second line contains an array   of  integers each separated by a space.'''
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    #Sort the list
+    a = sorted(arr)
+    
+    #Create a dictionary, using the List items as keys. This will automatically remove any duplicates because dictionaries cannot have duplicate keys.convert the dictionary back into a list
+    lst = list(dict.fromkeys(a))
+    
+    #using negative indexing
+    print(lst[-2])
